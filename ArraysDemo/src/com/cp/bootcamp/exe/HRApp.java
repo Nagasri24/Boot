@@ -32,7 +32,7 @@ public class HRApp {
 				
 				case 2: hrapp.searchEmployeeById();
 				break;
-				case 3: hrapp.updateEmployee();
+				case 3: hrapp.updateEmployeeSalary();
 				break;
 				case 4: hrapp.displayEmployees();
 				break;
@@ -84,7 +84,7 @@ public class HRApp {
 	{ try {
 		Employee[] emps = operations.getAllEmployess();
 		for(int i=0;i<emps.length;i++) {
-			System.out.println(emps[i].toString());	
+			displayEmployeeDetails(emps[i]);	
 		}
 		}
 	catch (Exception e) {
@@ -93,14 +93,12 @@ public class HRApp {
 	}
 	
 	
-	public void updateEmployee()
+	public void updateEmployeeSalary()
 	{
-		System.out.println("Enter exsting employee project ");
+		System.out.println("Enter Employee project ");
 		String project =  sc.nextLine();
-		System.out.println("Enter Salary to update ");
-		int salary = Integer.parseInt(sc.nextLine());
 
-		Employee e = new Employee(project,salary);
+		Employee e = new Employee(project);
 		
 		System.out.println(operations.updateEmployeeById(e));
 	}

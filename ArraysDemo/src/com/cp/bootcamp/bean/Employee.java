@@ -17,6 +17,15 @@ public class Employee {
 		this.salary = salary;
 		this.project = project;
 	}
+	public Employee(int code,int salary) {
+		super();
+		this.code = code;
+		this.salary = salary;
+	}
+	public Employee(String project) {
+		super();
+		this.project = project;
+	}
 	public int getCode() {
 		return code;
 	}

@@ -24,31 +24,23 @@ public class EmployeeOperations {
 		return e;
 	}
 	
-	public Employee updateSalary(int e) {
-		
+	public Employee[] getAllEmployess()
+	{
+		return arr;
+	}
+	
+	public Employee updateEmployeeById(Employee e)
+	{
 		for (int i = 0; i < index; i++) {
-			if(arr[i].getProject().equals("bank"))
+			if(arr[i].getProject().equals(e.getProject()))
 			{
-				int x = arr[i].getSalary();
-				int y = x+e;
-				arr[i].setSalary(y);
+				int updatedSal = arr[i].getSalary();
+				updatedSal= (int)(updatedSal + (updatedSal*0.1));
+				arr[i].setSalary(updatedSal);
+				return arr[i];
 			}
 		}
-		
 		return null;
-		
-		
 	}
 
-	public Employee displayAllEmployees() {
-		
-		Employee e = null;
-		
-		for (int i = 0; i < index; i++) {
-			System.out.println( arr[i]);
-		}
-		
-		return e;
-		
-	}
 }
