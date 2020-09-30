@@ -29,7 +29,6 @@ public class HRApp {
 			{
 				case 1: hrapp.createNewEmployee();
 				break;
-				
 				case 2: hrapp.searchEmployeeById();
 				break;
 				case 3: hrapp.updateEmployeeSalary();
